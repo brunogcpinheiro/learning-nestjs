@@ -5,8 +5,12 @@ import { Params } from 'express-serve-static-core';
 @Controller('movies')
 export class MoviesController {
   @Get()
-  helloMovies(): string {
-    return `Hello Movies!`
+  helloMovies(): {} {
+    return {
+      id: 1,
+      title: "Joker",
+      year: 2019
+    }
   }
 
   @Get(":id")
