@@ -3,7 +3,7 @@
 Learning NestJS building a Movie Reviewer API
 
 [x] Create a Module and output Hello World!
-[ ] Make a Movie CRUD 
+[ ] Make a Movie CRUD
 
 ## Installation
 
