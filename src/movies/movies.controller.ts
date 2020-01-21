@@ -6,11 +6,18 @@ import { Params } from 'express-serve-static-core';
 export class MoviesController {
   @Get()
   helloMovies(): {} {
-    return {
-      id: 1,
-      title: "Joker",
-      year: 2019
-    }
+    return [
+      {
+        id: 1,
+        title: "Joker",
+        year: 2019
+      },
+      {
+        id: 2,
+        title: "Frozen II",
+        year: 2020
+      }
+    ]
   }
 
   @Get(":id")
