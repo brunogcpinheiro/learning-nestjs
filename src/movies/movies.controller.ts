@@ -1,23 +1,15 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { Request } from "express"
-import { Params } from 'express-serve-static-core';
+import axios from "axios"
 
 @Controller('movies')
 export class MoviesController {
   @Get()
-  helloMovies(): {} {
-    return [
-      {
-        id: 1,
-        title: "Joker",
-        year: 2019
-      },
-      {
-        id: 2,
-        title: "Frozen II",
-        year: 2020
-      }
-    ]
+  async helloMovies(): Promise<any> {
+    const response = await axios.get("https://5000-e4f4857b-b154-43f4-a7ab-aca8a35c630c.ws-us02.gitpod.io/movies")
+    //const data = await response.json();
+
+    console.log(response)
+    return ``
   }
 
   @Get(":id")
